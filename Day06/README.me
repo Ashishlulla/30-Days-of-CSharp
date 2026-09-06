@@ -1,0 +1,98 @@
+# Day 06 — Methods in C#
+
+Methods are one of the most important building blocks in C#.
+
+A good method should ideally **do one thing**. This makes code easier to read, reuse, test, and maintain.
+
+## 🔹 1. Parameters
+
+Parameters allow us to pass data into a method.
+
+```csharp
+static int Add(int a, int b)
+{
+    return a + b;
+}
+```
+
+Here, `a` and `b` are parameters.
+
+---
+
+## 🔹 2. Return Values
+
+A method can return a value using the `return` keyword.
+
+```csharp
+int result = Add(10, 20);
+
+Console.WriteLine(result); // 30
+```
+
+The method returns the sum, which is stored in `result`.
+
+---
+
+## 🔹 3. Method Overloading
+
+C# allows multiple methods to have the **same name** as long as their parameters are different.
+
+```csharp
+static int Add(int a, int b)
+{
+    return a + b;
+}
+
+static int Add(int a, int b, int c)
+{
+    return a + b + c;
+}
+```
+
+The compiler determines which method to call based on the arguments provided.
+
+---
+
+## 🔹 4. Optional Parameters
+
+Optional parameters have a default value that is used when no value is provided.
+
+```csharp
+static void Greet(string name, string message = "Hello")
+{
+    Console.WriteLine($"{message}, {name}!");
+}
+```
+
+Both calls are valid:
+
+```csharp
+Greet("Ashish");
+
+Greet("Ashish", "Welcome");
+```
+
+---
+
+## 💡 Key Takeaway
+
+> **One method → One clear responsibility**
+
+Small and focused methods make our code:
+
+* ✅ Easier to read
+* ✅ Easier to test
+* ✅ Easier to reuse
+* ✅ Easier to maintain
+
+---
+
+### 📚 What I Learned Today
+
+* Parameters
+* Return values
+* Method overloading
+* Optional parameters
+* Writing focused and reusable methods
+
+**Day 06/30 — Keep learning C# 🚀**
